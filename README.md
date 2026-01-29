@@ -23,5 +23,3 @@ kiekvienoje užduotyje yra po 2 užuominas.
 ### Sėkmės!
 
 ***- Nojus Rukšėnas***
-
-*Naudojau dirbtinį intelektą dėl JavaScript (užuominų rodymas), HTTP Header-ių idėjos ir logotipo (¬_¬)*
