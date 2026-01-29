@@ -19,6 +19,7 @@ Taškai mažinami naudojant užuominas.
 kiekvienoje užduotyje yra po 2 užuominas.
 1 užuomina nuėma 2.5 taškus nuo užduoties.
 
+---
 
 ### Sėkmės!
 
