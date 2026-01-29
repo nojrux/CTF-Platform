@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+
+<body>
+    
+    <header>
+        <div>
+        <a id="index" href="/" style="font-size: 35px; padding-right: 20px"><b>CTF</b></a>
+
+        <a id="n1" href="/task1">1 Užduotis</a>
+        <a id="n2" href="/task2">2 Užduotis</a>
+        <a id="n3" href="/task3">3 Užduotis</a>
+        <a id="n4" href="/task4">4 Užduotis</a>
+        <a id="n5" href="/task5">5 Užduotis</a>
+        <a id="n6" href="/task6">6 Užduotis</a>
+        </div>
+        <hr>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+Task 1 :
+"Atkreipkite dėmesį į slaptažodį.",
+"Cezario salotos?"
+
+Task 2 :
+"'Svarbi Informacija' atrodo įtartinai ilga...",
+"Galbūt reikėtų atidžiau 'insepktuoti' puslapio elementus?"
+
+Task 3 :
+"Jums reikia atsisiųsti nuotrauką.",
+"Failai dažnai turi papildomų duomenų."
+
+Task 4 :
+"Čia naudojamas GET metodas.",
+"URL adresas gali turėti reikšmę."
+
+Task 5 :
+"Ši užduotis panaši į antrąją.",
+"DevTools rodo netik HTML kodą (jums gali reikėti perkrauti puslapį)."
+
+Task 6 :
+"Čia specialiai nefiltruojamas įvesties laukas.",
+"Šios užduoties 'FLAG' yra JavaScript kintamasis."

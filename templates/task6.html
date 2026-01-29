@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    #n6 {
+        text-shadow: cyan 0 0 10px;
+    }
+</style>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<center>
+
+<h1>Užduotis 6 (20t.)</h1>
+<br>
+
+<h3><u>Gaukite 'FLAG' patys...</u></h3>
+
+<p>{{ query | safe }}</p>
+
+<br>
+<hr>
+<br>
+
+<form action="/task6" method="GET" autocomplete="off">
+    <h3>Įveskite atsakymą čia:</h3>
+    <label for="answer">FLAG{<input type="text" name="flag6" id="answer">}</label>
+    <input type="submit" value="Pateikti">
+</form>
+
+<br>
+
+{% if answer == True %}
+<h1 style="text-shadow: rgb(0, 255, 0) 0 0 10px;">Teisingai!</h1>
+{% elif answer == False %}
+<h1 style="text-shadow: rgb(255, 0, 0) 0 0 10px;">Neteisingai!</h1>
+{% endif %}
+
+
+
+<br>
+
+<button id="showHintBtn">Rodyti užuominą</button>
+<p id="hint" style="display:none; white-space: pre-line;"></p>
+
+<script>
+const hints = [
+    "Čia specialiai nefiltruojamas įvesties laukas.",
+    "Šios užduoties 'FLAG' yra JavaScript kintamasis."
+];
+let shown = 0;
+
+document.getElementById("showHintBtn").addEventListener("click", function() {
+    if (!confirm("Ar tikrai norite pamatyti užuominą?")) return;
+
+    const hintEl = document.getElementById("hint");
+
+    if (shown < hints.length) {
+        hintEl.style.display = "block";
+        hintEl.innerText += "• " + hints[shown] + "\n";
+        shown++;
+    } else {
+        alert("Daugiau užuominų šiai užduočiai nėra.");
+    }
+});
+</script>
+
+</center>
+{% endblock %}

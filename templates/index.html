@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    #index {
+        text-shadow: cyan 0 0 10px;
+    }
+</style>
+
+<center>
+<div id="README">
+    <h2>🏴‍☠️ Sveiki atvykę į mano CTF platformą!</h2>
+    <p>Tai nedidelis Capture The Flag užduočių rinkinys, kuriame rasite 6 užduotis, kiekvienoje - vienas FLAG.</p>
+    <p>Jūsų tikslas - surasti FLAG ir jį pateikti.</p>
+    <p>Užduočių sudėtingumas didėja su kiekvina užduotimi.</p>
+
+    <br>
+    <h2>🏆 Taškų Sistema</h2>
+    <p>Kiekviena užduotis turi savo taškų kiekį, kuris didėja pagal sudėtingumą.</p>
+    <ul>
+        <li>1, 2 užduotys: 5 taškų</li>
+        <li>3, 4 užduotys: 10 taškų</li>
+        <li>5, 6 užduotys: 20 taškų</li>
+    </ul>
+    <p>Bendras galimas taškų kiekis: 70 taškų.</p>
+    <p>Taškai mažinami naudojant užuominas.</p>
+
+    <br>
+    <h2>💡 Užstrigote?</h2>
+    <p>kiekvienoje užduotyje yra po 2 užuominas.</p>
+    <p>1 užuomina nuėma 2.5 taškus nuo užduoties.</p>
+
+    <br>
+    <h3>Sėkmės!</h3>
+    <h4 style="text-align: right; padding-right: 20px;">- Nojus Rukšėnas</h4>
+</div>
+</center>
+{% endblock %}

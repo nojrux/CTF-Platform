@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    #n4 {
+        text-shadow: cyan 0 0 10px;
+    }
+</style>
+
+<center>
+
+<h1>Užduotis 4 (10t.)</h1>
+<br>
+
+<h3><u>Atsakymas:</u></h3>
+<p>FLAG=this_is_why_we_dont_use_get</p>
+
+<br>
+<hr>
+<br>
+
+<h3 style="text-shadow: red 0 0 10px;"><del>Įveskite atsakymą čia:</del></h3>
+<label style="text-shadow: red 0 0 10px;"><del>FLAG{<input type="text">}</del></label>
+<input type="submit" value="Pateikti" style="text-shadow: red 0 0 10px;">
+<h4>*Šioje užduotyje atsakymo laukelis sugedęs*</h4>
+
+<br>
+
+{% if answer == True %}
+<h1 style="text-shadow: rgb(0, 255, 0) 0 0 10px;">Teisingai!</h1>
+{% elif answer == False %}
+<h1 style="text-shadow: rgb(255, 0, 0) 0 0 10px;">Neteisingai!</h1>
+{% endif %}
+
+
+
+<br>
+
+<button id="showHintBtn">Rodyti užuominą</button>
+<p id="hint" style="display:none; white-space: pre-line;"></p>
+
+<script>
+const hints = [
+    "Čia naudojamas GET metodas.",
+    "URL adresas gali turėti reikšmę."
+];
+let shown = 0;
+
+document.getElementById("showHintBtn").addEventListener("click", function() {
+    if (!confirm("Ar tikrai norite pamatyti užuominą?")) return;
+
+    const hintEl = document.getElementById("hint");
+
+    if (shown < hints.length) {
+        hintEl.style.display = "block";
+        hintEl.innerText += "• " + hints[shown] + "\n";
+        shown++;
+    } else {
+        alert("Daugiau užuominų šiai užduočiai nėra.");
+    }
+});
+</script>
+
+</center>
+{% endblock %}

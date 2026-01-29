@@ -1,0 +1,6 @@
+Task 1 - FLAG{haha_caesar_cipher_is_easy},
+Task 2 - FLAG{inspect_element_huh?},
+Task 3 - FLAG{bruh_i_hate_metadata},
+Task 4 - FLAG{this_is_why_we_dont_use_get},
+Task 5 - FLAG{first_time_seeing_http_headers?},
+Task 6 - FLAG{xss_as_the_final_boss}

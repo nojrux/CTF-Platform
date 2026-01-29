@@ -1,0 +1,58 @@
+body {
+    background-color: #26282c;
+    margin: 0;
+}
+
+h1, h2, h3, h4, p, a, label, input, li {
+    font-family: cursive;
+    color: white;
+    text-shadow: white 0 0 10px;
+    padding-left: 20px;
+}
+
+input, button {
+    background-color: #53575d;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: white 0 0 10px;
+    cursor: pointer;
+}
+
+button:hover, input:hover {
+    box-shadow: cyan 0 0 20px;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header {
+    background-color: #53575d;
+    box-shadow: black 0 0 10px;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header a:hover {
+    text-shadow: cyan 0 0 10px;
+    transition: 0.5s;
+}
+
+#README {
+    max-width: 800px;
+    text-align: left;
+    margin-top: 50px;
+    line-height: 1.25;
+    padding: 20px;
+    box-shadow: white 0 0 10px;
+    border-radius: 25px;
+    background-color: #1c1d1f;
+}

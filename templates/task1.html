@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    #n1 {
+        text-shadow: cyan 0 0 10px;
+    }
+</style>
+
+<center>
+
+<h1>Užduotis 1 (5t.)</h1>
+<br>
+
+<h3><u>Prisijungimo Duomenys:</u></h3>
+<p>Vardas: Mr ProHacker</p>
+<p>Gimimo data: 2002-04-16</p>
+<p>Slaptažodis: kdkd_fdhvdu_flskhu_lv_hdvb</p>
+
+<br>
+<hr>
+<br>
+
+<form method="POST" autocomplete="off">
+    <h3>Įveskite atsakymą čia:</h3>
+    <label for="answer">FLAG{<input type="text" name="flag1" id="answer">}</label>
+    <input type="submit" value="Pateikti">
+</form>
+
+<br>
+
+{% if answer == True %}
+<h1 style="text-shadow: rgb(0, 255, 0) 0 0 10px;">Teisingai!</h1>
+{% elif answer == False %}
+<h1 style="text-shadow: rgb(255, 0, 0) 0 0 10px;">Neteisingai!</h1>
+
+{% endif %}
+
+
+
+<br>
+
+<button id="showHintBtn">Rodyti užuominą</button>
+<p id="hint" style="display:none; white-space: pre-line;"></p>
+
+<script>
+const hints = [
+    "Atkreipkite dėmesį į slaptažodį.",
+    "Cezario salotos?"
+];
+let shown = 0;
+
+document.getElementById("showHintBtn").addEventListener("click", function() {
+    if (!confirm("Ar tikrai norite pamatyti užuominą?")) return;
+
+    const hintEl = document.getElementById("hint");
+
+    if (shown < hints.length) {
+        hintEl.style.display = "block";
+        hintEl.innerText += "• " + hints[shown] + "\n";
+        shown++;
+    } else {
+        alert("Daugiau užuominų šiai užduočiai nėra.");
+    }
+});
+
+</script>
+
+</center>
+{% endblock %}
